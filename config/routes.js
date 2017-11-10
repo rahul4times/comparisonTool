@@ -4,4 +4,12 @@ module.exports = function(app){
 
   app.get('/', template.index);
 
+
+
+  // just to get to create store page
+  app.get('/createstore', template.createStore);
+
+  // Adding new store to store table
+  app.post('/createstore', template.addStore);
+
 }
