@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 var routes_setter = require('./config/routes.js');
+require("./config/sessions.js")(app);
 routes_setter(app);
 
 app.listen(port, function() {
